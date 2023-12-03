@@ -74,17 +74,17 @@ const Navbar = () => {
                            
                             <li>
                                 <NavLink
-                                    to="/blog"
+                                    to="/review"
                                     className={({ isActive, isPending }) =>
                                         isPending ? "pending" : isActive ? "text-pink-800 font-bold underline" : ""
                                     }
                                 >
-                                    Blog
+                                    Review
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink
-                                    to="/connect"
+                                    to="/contact"
                                     className={({ isActive, isPending }) =>
                                         isPending ? "pending" : isActive ? "text-pink-800 font-bold underline" : ""
                                     }
@@ -138,18 +138,18 @@ const Navbar = () => {
                       
                         <li>
                             <NavLink
-                                to="/blog"
+                                to="/review"
                                 className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "text-pink-800 font-bold underline" : ""
                                 }
                             >
-                                Blog
+                                Review
                             </NavLink>
                         </li>
                        
                         <li>
                             <NavLink
-                                to="/connect"
+                                to="/contact"
                                 className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "text-pink-800 font-bold underline" : ""
                                 }

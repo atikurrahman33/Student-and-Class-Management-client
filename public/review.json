@@ -1,0 +1,51 @@
+[
+    {
+      "course_id": 1,
+      "_id": 101,
+      "name": "Alice Johnson",
+      "rating": 4.8,
+      "review": "The Introduction to Data Entry course was fantastic! The instructor explained concepts clearly, and the hands-on practice helped improve my typing speed. Highly recommended!",
+      "date": "2023-04-15"
+    },
+    {
+      "course_id": 3,
+      "_id": 102,
+      "name": "Bob Smith",
+      "rating": 4.5,
+      "review": "Web Development Basics exceeded my expectations. The content was well-structured, and the practical exercises were very helpful. I feel confident in building my first websites now.",
+      "date": "2023-04-12"
+    },
+    {
+      "course_id": 8,
+      "_id": 103,
+      "name": "Catherine Davis",
+      "rating": 4.9,
+      "review": "Digital Marketing Strategies is a game-changer! Olivia Taylor is an excellent instructor, and the strategies taught are up-to-date. I've already seen positive results in my campaigns.",
+      "date": "2023-04-10"
+    },
+    {
+      "course_id": 11,
+      "_id": 104,
+      "name": "David Brown",
+      "rating": 4.6,
+      "review": "Machine Learning Fundamentals is an insightful course. David Clark explains complex concepts in a way that's easy to understand. The hands-on projects were engaging.",
+      "date": "2023-04-08"
+    },
+    {
+      "course_id": 5,
+      "_id": 105,
+      "name": "Eva Martinez",
+      "rating": 4.7,
+      "review": "Java Advanced Concepts was challenging but rewarding. Robert Miller's teaching style kept me engaged throughout. I've gained a deeper understanding of Java programming.",
+      "date": "2023-04-05"
+    },
+    {
+      "course_id": 12,
+      "_id": 106,
+      "name": "Frank Turner",
+      "rating": 4.5,
+      "review": "Social Media Management was practical and informative. Grace Turner provided valuable insights into managing and promoting content on various social media platforms.",
+      "date": "2023-04-02"
+    }
+  ]
+  

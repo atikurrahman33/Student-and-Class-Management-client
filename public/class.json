@@ -7,7 +7,8 @@
       "rating": 4.5,
       "price": 49.99,
       "description": "Learn the fundamentals of data entry and improve your typing skills.",
-      "image": "https://i.ibb.co/5jTtwWV/closeup-hands-using-computer-laptop-with-screen-showing-analysis-data.jpg"
+      "image": "https://i.ibb.co/5jTtwWV/closeup-hands-using-computer-laptop-with-screen-showing-analysis-data.jpg",
+      "total_enrollment": 100
     },
     {
       "id": 2,
@@ -17,7 +18,8 @@
       "rating": 4.2,
       "price": 59.99,
       "description": "Explore the basics of graphic design, including layout and color theory.",
-      "image": "https://i.ibb.co/J3Nz2qm/A-12-1.jpg"
+      "image": "https://i.ibb.co/J3Nz2qm/A-12-1.jpg",
+      "total_enrollment": 150
     },
     {
       "id": 3,
@@ -27,7 +29,8 @@
       "rating": 4.8,
       "price": 79.99,
       "description": "Get started with web development and build your first websites.",
-      "image": "https://i.ibb.co/fCsvmxB/A-12-2.jpg"
+      "image": "https://i.ibb.co/fCsvmxB/A-12-2.jpg",
+      "total_enrollment": 80
     },
     {
       "id": 4,
@@ -37,7 +40,8 @@
       "rating": 4.0,
       "price": 69.99,
       "description": "An introductory course to learn the basics of C++ programming.",
-      "image": "https://i.ibb.co/m8CCzND/A-12-3.jpg"
+      "image": "https://i.ibb.co/m8CCzND/A-12-3.jpg",
+      "total_enrollment": 120
     },
     {
       "id": 5,
@@ -47,7 +51,8 @@
       "rating": 4.6,
       "price": 89.99,
       "description": "Dive into advanced Java concepts and enhance your programming skills.",
-      "image": "https://i.ibb.co/jf4QdGg/A-12-9.jpg"
+      "image": "https://i.ibb.co/jf4QdGg/A-12-9.jpg",
+      "total_enrollment": 200
     },
     {
       "id": 6,
@@ -57,17 +62,19 @@
       "rating": 4.7,
       "price": 39.99,
       "description": "Improve your English language skills, including grammar and vocabulary.",
-      "image": "https://i.ibb.co/BzQRFzb/A-12-4.jpg"
+      "image": "https://i.ibb.co/BzQRFzb/A-12-4.jpg",
+      "total_enrollment": 90
     },
     {
       "id": 7,
       "title": "Python for Data Science",
       "instructor": "Daniel Harris",
       "category": "Programming",
-      "rating": 4,
+      "rating": 4.0,
       "price": 74.99,
       "description": "Learn Python programming specifically tailored for data science tasks.",
-      "image": "https://i.ibb.co/m8CCzND/A-12-3.jpg"
+      "image": "https://i.ibb.co/m8CCzND/A-12-3.jpg",
+      "total_enrollment": 150
     },
     {
       "id": 8,
@@ -77,7 +84,8 @@
       "rating": 4.9,
       "price": 99.99,
       "description": "Master digital marketing strategies to promote products and services.",
-      "image": "https://i.ibb.co/f0hZG3F/A-12-5.jpg"
+      "image": "https://i.ibb.co/f0hZG3F/A-12-5.jpg",
+      "total_enrollment": 180
     },
     {
       "id": 9,
@@ -87,7 +95,8 @@
       "rating": 4.3,
       "price": 59.99,
       "description": "Understand the basics of UX/UI design and create user-friendly interfaces.",
-      "image": "https://i.ibb.co/qmGqYNM/A-12-6.jpg"
+      "image": "https://i.ibb.co/qmGqYNM/A-12-6.jpg",
+      "total_enrollment": 100
     },
     {
       "id": 10,
@@ -97,7 +106,8 @@
       "rating": 4.2,
       "price": 49.99,
       "description": "Beginner-level course to learn the basics of the Spanish language.",
-      "image": "https://i.ibb.co/NyjxxnW/A-12-7.jpg"
+      "image": "https://i.ibb.co/NyjxxnW/A-12-7.jpg",
+      "total_enrollment": 120
     },
     {
       "id": 11,
@@ -107,7 +117,8 @@
       "rating": 4.6,
       "price": 89.99,
       "description": "Explore the fundamentals of machine learning and its applications.",
-      "image": "https://i.ibb.co/8s9NWSD/A-12-10.jpg"
+      "image": "https://i.ibb.co/8s9NWSD/A-12-10.jpg",
+      "total_enrollment": 130
     },
     {
       "id": 12,
@@ -117,7 +128,7 @@
       "rating": 4.5,
       "price": 79.99,
       "description": "Learn effective strategies for managing and promoting content on social media.",
-      "image": "https://i.ibb.co/93w45Jb/A-12-8.jpg"
+      "image": "https://i.ibb.co/93w45Jb/A-12-8.jpg",
+      "total_enrollment": 160
     }
 ]
-  
