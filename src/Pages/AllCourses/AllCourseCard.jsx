@@ -1,9 +1,9 @@
-import Rating from "react-rating";
-import { FaRegStar, FaStar } from "react-icons/fa";
+
+import { Link } from "react-router-dom";
 
 
 const AllCourseCard = ({ popular }) => {
-    const { title, instructor, price, image ,description, total_enrollment} = popular;
+    const { title, instructor, price, image ,description, total_enrollment,_id} = popular;
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl h-[500px]">
@@ -17,7 +17,8 @@ const AllCourseCard = ({ popular }) => {
                     <p className="font-semibold">Total Enrollment: {total_enrollment}</p>
                     <p className="font-semibold">Description:{description}</p>
                     <div>
-                <button className= "bg-cyan-500 rounded-lg py-1 px-3">Enroll</button>
+                    <Link to={`/details/${_id}`}>
+                <button className= "bg-cyan-500 rounded-lg py-1 px-3">Enroll</button></Link>
                 </div>
                    
                 </div>

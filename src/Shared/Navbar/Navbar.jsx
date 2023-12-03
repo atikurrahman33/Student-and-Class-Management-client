@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import img from '../../assets/EduMentor-logos_transparent.png'
 import { AuthContext } from "../../Provider/AuthProvider";
 
@@ -165,37 +165,30 @@ const Navbar = () => {
                     <div className=" rounded-full flex gap-4 items-center  ">
                         <div className="flex gap-3 items-center">
                          
-                            {
-                                user &&
+                            
 
-                                <div>
-
-                                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar ">
-
-
-                                        <div className="w-10 rounded-full">
-                                            <img src={user?.photoURL} />
-
+                                  {
+                                            user &&
+                                            <div className="grid grid-cols-1 lg:grid-cols-2 px-6">
+                                            <div className="md:dropdown">
+                                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                                    <div className="w-10 rounded-full">
+                                                        {
+                                                            user.photoURL ? <img src={user.photoURL} /> : <img src="https://i.ibb.co/2qr381T/user-1.png"></img>
+                                                        }
+                                                    </div>
+                                                </label>
+                                                <ul tabIndex={0} className="menu menu-sm dropdown-content my-1 z-[10] p-2 shadow bg-base-100 rounded-box w-52">
+                                                    <li><Link to="/dashboard/home">Dashboard</Link></li>
+                                                    <li><button onClick={handleSignOut}>Log Out</button></li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                    </label>
-                                </div>
-                            }
-
-                            {
-                                user ?
-                                    <button onClick={handleSignOut} className="font-bold">Sign Out</button>
-                                    :
-                                    <NavLink
-                                        to="/login"
-                                        className={({ isActive, }) =>
-                                            isActive ? "text-pink-700 font-bold underline" : ""
-                                        }
-                                    >
-                                        Login
-                                    </NavLink>
+}
+                                   <Link to={'/login'} className="bg-red-600 text-white font-bold py-1 px-2 rounded-lg">Login</Link>
 
 
-                            }
+                            
 
                         </div>
                         <div className="px-4 items-center"><label className="swap swap-rotate">

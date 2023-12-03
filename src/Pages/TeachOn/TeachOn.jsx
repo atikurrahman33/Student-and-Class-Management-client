@@ -14,23 +14,23 @@ function TeachOn() {
 
         const form = e.target;
         const photoURL = form.photoURL.value;
-        const name = form.name.value;
+        const title = form.title.value;
         const userName = form.userName.value;
         const userEmail = form.userEmail.value;
         const category = form.category.value;
-        const price = parseFloat(form.price.value);
+        const experience = form.experience.value;        
         const rating = parseFloat(form.rating.value);
         const quantity = form.quantity.value;
         const description = form.description.value;
 
         const userObj = { // Use a different variable name
-            name,
+            title,
             picture: photoURL,
             userName,
             email: userEmail,
             availableQuantity: quantity,
             category,
-            price,
+            experience,            
             rating,
             description
         };
@@ -50,7 +50,7 @@ function TeachOn() {
             if (json.insertedId) {
                 Swal.fire(
                     'Thank you!',
-                    'Your car is now available',
+                    'Your Data is now available',
                     'success'
                 )
                 form.reset()
@@ -60,8 +60,8 @@ function TeachOn() {
 
   return (
     <div>
-     <h1 className="font-bold text-blue-900 md:text-4xl text-center">ADD YOUR NEW CAR</h1>
-            <div className=" flex-shrink-0 mx-auto bg-[#F3F3F3] md:p-10 my-10">
+     <h1 className="font-bold text-cyan-600 md:text-4xl text-center">ADD YOUR Information</h1>
+            <div className=" flex-shrink-0 mx-auto bg-zinc-500 md:p-10 my-10">
             
                 <div className="card-body ">
                     <form onSubmit={handleUser}>
@@ -70,7 +70,7 @@ function TeachOn() {
                                 <input type="text" name="photoURL" placeholder="Photo url link..." className="input input-bordered" required />
                             </div>
                             <div className="form-control">
-                                <input type="text" name="name" placeholder="Name" className="input input-bordered" />
+                                <input type="text" name="title" placeholder="Title" className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <input type="text" name="userName" defaultValue={user?.displayName} className="input input-bordered" required />
@@ -87,16 +87,27 @@ function TeachOn() {
 
                                 >                                    
                                     <option value="" >Select a category</option>
-                                    <option value="Toyota">Toyota</option>
-                                    <option value="Honda">Honda</option>
-                                    <option value="Ford">Ford</option>
-                                    <option value="Chevrolet">Chevrolet</option>
-                                    <option value="Nissan">Nissan</option>
-                                    <option value="Bmw">BMW</option>
+                                    <option value="Toyota">Programmer</option>
+                                    <option value="Honda">Marketing</option>
+                                    <option value="Ford">Data science</option>
+                                    <option value="Chevrolet">Language</option>
+                                    <option value="Nissan">Design</option>
+                                    
                                 </select>
                             </div>
                             <div className="form-control">
-                                <input type="number" name="price" placeholder="Price" className="input input-bordered" required />
+                                <select
+                                    id="experience"
+                                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none input-bordered"
+                                    name="experience"
+
+                                >                                    
+                                    <option value="" >Select experience</option>
+                                    <option value="Toyota">beginner  </option>
+                                    <option value="Honda">experienced</option>
+                                    <option value="Ford">some idea</option>
+                                    
+                                </select>
                             </div>
                             <div className="form-control">
                                 <input type="text" name="rating" placeholder="Rating" className="input input-bordered" required />
@@ -110,7 +121,7 @@ function TeachOn() {
                         </div>
                         <div className="form-control mt-6">
                             {/* <button className="btn border-0 bg-[#FF3811] hover:bg-orange-500">Order Confirm</button> */}
-                            <input className="btn border-0 bg-blue-500 hover:bg-blue-700" type="submit" value="ADD CAR" />
+                            <input className="btn border-0 bg-cyan-600 hover:bg-blue-700" type="submit" value="Submit For Review" />
                         </div>
                     </form>
                 </div>

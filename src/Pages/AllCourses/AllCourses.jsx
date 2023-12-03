@@ -5,7 +5,7 @@ import AllCourseCard from "./AllCourseCard";
 const AllCourses = () => {
     const[popular, setPopular] =useState([]);
     useEffect(()=>{
-        fetch('class.json')
+        fetch('http://localhost:5000/allClass')
       .then(response => response.json())
       .then(data =>{
         
