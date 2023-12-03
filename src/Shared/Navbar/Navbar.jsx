@@ -4,6 +4,7 @@ import img from '../../assets/EduMentor-logos_transparent.png'
 import { AuthContext } from "../../Provider/AuthProvider";
 
 
+
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext);
@@ -70,8 +71,8 @@ const Navbar = () => {
                                     Teach On EduMentor
                                 </NavLink>
                             </li>
-                            
-                           
+
+
                             <li>
                                 <NavLink
                                     to="/review"
@@ -133,9 +134,9 @@ const Navbar = () => {
                                 Teach On EduMentor
                             </NavLink>
                         </li>
-                       
-                       
-                      
+
+
+
                         <li>
                             <NavLink
                                 to="/review"
@@ -146,7 +147,7 @@ const Navbar = () => {
                                 Review
                             </NavLink>
                         </li>
-                       
+
                         <li>
                             <NavLink
                                 to="/contact"
@@ -163,8 +164,7 @@ const Navbar = () => {
                 <div className="navbar-end gap-7 ">
                     <div className=" rounded-full flex gap-4 items-center  ">
                         <div className="flex gap-3 items-center">
-
-                           
+                         
                             {
                                 user &&
 

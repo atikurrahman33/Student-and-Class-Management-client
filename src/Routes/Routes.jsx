@@ -8,6 +8,8 @@ import AllCourses from "../Pages/AllCourses/AllCourses";
 import TeachOn from "../Pages/TeachOn/TeachOn";
 import Review from "../Pages/Review/Review";
 import Contact from "../Pages/Contact/Contact";
+import Login from "../Pages/Login/Login";
+import SignUp from "../Pages/SignUp/SignUp";
 
  export const router = createBrowserRouter([
     {
@@ -33,6 +35,14 @@ import Contact from "../Pages/Contact/Contact";
         {
             path:'/contact',
             element:<Contact></Contact>
+        },
+        {
+            path:'/login',
+            element:<Login></Login>
+        },
+        {
+            path:'/signup',
+            element:<SignUp></SignUp>
         }
     ]
     },
