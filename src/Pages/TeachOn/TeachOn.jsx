@@ -13,31 +13,27 @@ function TeachOn() {
         e.preventDefault(); // Prevent the form from submitting the traditional way
 
         const form = e.target;
-        const photoURL = form.photoURL.value;
+        const photoURL = form.userPhotoURL.value;
         const title = form.title.value;
         const userName = form.userName.value;
         const userEmail = form.userEmail.value;
         const category = form.category.value;
         const experience = form.experience.value;        
-        const rating = parseFloat(form.rating.value);
-        const quantity = form.quantity.value;
         const description = form.description.value;
 
         const userObj = { // Use a different variable name
             title,
-            picture: photoURL,
+            photoURL: photoURL,
             userName,
-            email: userEmail,
-            availableQuantity: quantity,
+            email: userEmail,            
             category,
             experience,            
-            rating,
             description
         };
 
         console.log(userObj);
 
-        fetch('https://simple-brand-server-bnt1savmi-atikur-rahmans-projects-28d664b2.vercel.app/users', {
+        fetch('http://localhost:5000/requests', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -67,7 +63,7 @@ function TeachOn() {
                     <form onSubmit={handleUser}>
                         <div className="md:grid grid-cols-2 gap-4 space-y-4 md:space-y-0">
                             <div className="form-control">
-                                <input type="text" name="photoURL" placeholder="Photo url link..." className="input input-bordered" required />
+                                <input type="text" name="userPhotoURL" defaultValue={user?.photoURL} className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <input type="text" name="title" placeholder="Title" className="input input-bordered" />
@@ -87,11 +83,11 @@ function TeachOn() {
 
                                 >                                    
                                     <option value="" >Select a category</option>
-                                    <option value="Toyota">Programmer</option>
-                                    <option value="Honda">Marketing</option>
-                                    <option value="Ford">Data science</option>
-                                    <option value="Chevrolet">Language</option>
-                                    <option value="Nissan">Design</option>
+                                    <option value="Programmer">Programmer</option>
+                                    <option value="Marketing">Marketing</option>
+                                    <option value="Data science">Data science</option>
+                                    <option value="Language">Language</option>
+                                    <option value="Design">Design</option>
                                     
                                 </select>
                             </div>
@@ -103,18 +99,13 @@ function TeachOn() {
 
                                 >                                    
                                     <option value="" >Select experience</option>
-                                    <option value="Toyota">beginner  </option>
-                                    <option value="Honda">experienced</option>
-                                    <option value="Ford">some idea</option>
+                                    <option value="Beginner">Beginner </option>
+                                    <option value="Experienced">Experienced</option>
+                                    <option value="Some idea">Some idea</option>
                                     
                                 </select>
                             </div>
-                            <div className="form-control">
-                                <input type="text" name="rating" placeholder="Rating" className="input input-bordered" required />
-                            </div>
-                            <div className="form-control">
-                                <input type="number" name="quantity" placeholder="Available quantity" className="input input-bordered" required />
-                            </div>
+                           
                         </div>
                         <div className="form-control">
                             <textarea className="textarea textarea-bordered h-52 mt-4" name="description" placeholder="Detail description"></textarea>

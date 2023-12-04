@@ -19,6 +19,10 @@ import EnrollmentClass from "../Pages/EnrollmentClass/EnrollmentClass";
 import Profile from "../Pages/Profile/Profile";
 import MyClass from "../Layout/Dashboard/Dashboard/MyClass";
 import DashboardHome from "../Layout/Dashboard/Dashboard/DashboardHome";
+import AddClass from "../Layout/Dashboard/Instrauctor/AddClass";
+import InstractorClass from "../Layout/Dashboard/Instrauctor/InstractorClass";
+import Update from "../Layout/Dashboard/Instrauctor/Update";
+import InstractorProfile from "../Layout/Dashboard/Instrauctor/InstractorProfile";
 
  export const router = createBrowserRouter([
     {
@@ -84,6 +88,23 @@ import DashboardHome from "../Layout/Dashboard/Dashboard/DashboardHome";
           {
             path:'home',
             element:<DashboardHome></DashboardHome>
+          },
+          {
+            path:'addclass',
+            element:<AddClass></AddClass>
+          },
+          {
+            path:'insclass',
+            element:<InstractorClass></InstractorClass>
+          },
+          {
+            path:'update',
+            element:<Update></Update>,
+            loader: ({ params }) => fetch(`http://localhost:5000/addclass/${params.id}`),
+          },
+          {
+            path:'insprofile',
+            element:<InstractorProfile></InstractorProfile>
           }
           // Admin routes
          

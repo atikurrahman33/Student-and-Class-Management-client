@@ -22,7 +22,8 @@ const Google = () => {
                     console.log(googleLoggedUser);
                     const userInfo={
                         email: result.user?.email,
-                        name: result.user?.displayName
+                        name: result.user?.displayName,
+                        photoURL:result.user?.photoURL
                     }
                     axiospublic.post('/users',userInfo)
                     .then(res=>{
