@@ -21,7 +21,7 @@ const ClassTable = ({ Class, myClass, setMyClass }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/addclass/${id}`, {
+                fetch(`https://edu-mentor-server-blush.vercel.app/addclass/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -55,7 +55,7 @@ const ClassTable = ({ Class, myClass, setMyClass }) => {
                     <div className="card-actions justify-between pb-3">
                         <div className=""><RxCross1 onClick={() => deleteFood(Class?._id)} className="p-3 text-5xl rounded" style={{ color: '#774320', background: 'linear-gradient(90.74deg, rgba(119, 67, 32, 0.15) 0.16%, rgba(232, 197, 128, 0.15) 100%)' }}></RxCross1></div>
                         <div className=""> {/* The button to open modal */}
-            <Link to={`update/${Class?._id}`} htmlFor="my-modal"><RxPencil1 className="p-3 text-5xl rounded" style={{ color: '#774320', background: 'linear-gradient(90.74deg, rgba(119, 67, 32, 0.15) 0.16%, rgba(232, 197, 128, 0.15) 100%)' }}></RxPencil1></Link></div>
+                    <Link to={`/update/${Class?._id}`} htmlFor="my-modal"><RxPencil1 className="p-3 text-5xl rounded" style={{ color: '#774320', background: 'linear-gradient(90.74deg, rgba(119, 67, 32, 0.15) 0.16%, rgba(232, 197, 128, 0.15) 100%)' }}></RxPencil1></Link></div>
             
                     </div>
                    

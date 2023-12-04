@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const POpularCourse = () => {
     const[popular, setPopular] =useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/allClass')
+        fetch('https://edu-mentor-server-blush.vercel.app/allClass')
       .then(response => response.json())
       .then(data =>{
         const sortedCourses = data.sort((a, b) => b.rating - a.rating);

@@ -1,26 +1,32 @@
 import { FaAd, FaBook, FaBookmark, FaCalendar, FaHome,  FaList,  FaMailBulk,   FaSearch, FaShoppingCart, FaUsers, FaUtensilSpoon, FaWallet } from "react-icons/fa";
 import { Link, NavLink, Outlet } from "react-router-dom";
+import useAdmin from "../../hooks/useAdmin";
+import useInstructor from "../../hooks/useInstructor";
 
 const Dashboard = () => {
     // TODO
-    const isAdmin= false;
-    const isTeacher= true;
+    const [isAdmin, isAdminLoading] = useAdmin();
+    const [isInstructor, isInstructorLoading] = useInstructor();
+    console.log(isInstructor);
+    // console.log(isAdmin);
+    // const isAdmin= 1;
     
     return (
         <div className="flex">
-            <div className="w-64 min h-screen bg-cyan-500 h-full">
+            <div className="w-64 min  bg-cyan-500 ">
                 <ul className="menu p-4">
                 {
                     isAdmin ? <> <li><Link><FaHome></FaHome> User Admin</Link></li>
                     {/* <li><NavLink to="/dashboard/reservations"><FaCalendarAlt></FaCalendarAlt> Reservations</NavLink></li> */}
                     <li><NavLink to="/dashboard/manageClasses"><FaWallet></FaWallet> Manage Classes</NavLink></li>
-                    <li><NavLink to="/dashboard/allusers"><FaWallet></FaWallet>Manage Users</NavLink></li>
+                    <li><NavLink to="/dashboard/manageUser"><FaWallet></FaWallet>Manage Users</NavLink></li>
+                    <li><NavLink to="/dashboard/insprofile">Profile</NavLink></li>
                     </> : <>
                         {
-                            isTeacher ?  <> <li><Link><FaHome></FaHome> User Instructor</Link></li>
+                            isInstructor ?  <> <li><Link><FaHome></FaHome> User Instructor</Link></li>
                             {/* <li><NavLink to="/dashboard/reservations"><FaCalendarAlt></FaCalendarAlt> Reservations</NavLink></li> */}
                             <li><NavLink to="/dashboard/addClass">Add A Class</NavLink></li>
-                            <li><NavLink to="/dashboard/insClass">My Classes</NavLink></li>
+                            <li><NavLink to="/dashboard/insClass/">My Classes</NavLink></li>
                             <li><NavLink to="/dashboard/insprofile">Profile</NavLink></li>
                              </> : 
                              <> <li><Link><FaHome></FaHome> User Home</Link></li>
@@ -32,7 +38,8 @@ const Dashboard = () => {
                                      {/* <span className="badge inl badge-secondary">+{cart?.length || 0}</span> */}
                                  </NavLink>
          
-                             </li> </>
+                             </li>
+                             <li><NavLink to="/dashboard/insprofile">Profile</NavLink></li> </>
                         }
                     </>
                    }

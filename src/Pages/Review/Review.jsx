@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const Review = () => {
     const[review, setReview] =useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/allreview')
+        fetch('https://edu-mentor-server-blush.vercel.app/allreview')
       .then(response => response.json())
       .then(data =>{
        

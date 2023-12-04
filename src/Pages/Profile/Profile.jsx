@@ -5,7 +5,7 @@ const Profile = () => {
     const { user } = useContext(AuthContext);
 
     const [users, setUsers] = useState([]);
-    const url = `http://localhost:5000/users/?email=${user?.email}`;
+    const url = `https://edu-mentor-server-blush.vercel.app/users/?email=${user?.email}`;
 
     useEffect(() => {
         fetch(url)

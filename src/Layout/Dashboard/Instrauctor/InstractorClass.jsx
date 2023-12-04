@@ -8,7 +8,7 @@ const InstractorClass = () => {
     console.log(user);
 
     const [myClass, setMyClass] = useState([]);
-    const url = `http://localhost:5000/addclass/?email=${user?.email}`;
+    const url = `https://edu-mentor-server-blush.vercel.app/addclass/?email=${user?.email}`;
 
     useEffect(() => {
         fetch(url)

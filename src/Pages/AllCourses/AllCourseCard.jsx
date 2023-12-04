@@ -3,10 +3,12 @@ import { Link } from "react-router-dom";
 
 
 const AllCourseCard = ({ popular }) => {
-    const { title, instructor, price, image ,description, total_enrollment,_id} = popular;
+    const { title, instructor, price, image, description, total_enrollment, _id, status } = popular;
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-xl h-[500px]">
+            {
+                status == 'approved' &&
+                <div className="card w-96 bg-base-100 shadow-xl h-[500px]">
                 <figure className="px-10 pt-10 h-[200px]">
                     <img src={image} alt="Shoes" className="rounded-xl" />
                 </figure>
@@ -17,13 +19,14 @@ const AllCourseCard = ({ popular }) => {
                     <p className="font-semibold">Total Enrollment: {total_enrollment}</p>
                     <p className="font-semibold">Description:{description}</p>
                     <div>
-                    <Link to={`/details/${_id}`}>
-                <button className= "bg-cyan-500 rounded-lg py-1 px-3">Enroll</button></Link>
+                        <Link to={`/details/${_id}`}>
+                            <button className="bg-cyan-500 rounded-lg py-1 px-3">Enroll</button></Link>
+                    </div>
+
                 </div>
-                   
-                </div>
-                
+
             </div>
+            }
 
         </div>
     );

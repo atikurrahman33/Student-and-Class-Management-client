@@ -33,7 +33,7 @@ function AddClass() {
 
         console.log(userObj);
 
-        fetch('http://localhost:5000/addclass', {
+        fetch('https://edu-mentor-server-blush.vercel.app/addclass', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -23,6 +23,9 @@ import AddClass from "../Layout/Dashboard/Instrauctor/AddClass";
 import InstractorClass from "../Layout/Dashboard/Instrauctor/InstractorClass";
 import Update from "../Layout/Dashboard/Instrauctor/Update";
 import InstractorProfile from "../Layout/Dashboard/Instrauctor/InstractorProfile";
+import ManageUser from "../Layout/Dashboard/Admin/ManageUser/ManageUser";
+import AdminRoute from "./AdminRoute";
+import ManageClasses from "../Layout/Dashboard/Admin/ManageClasses/ManageClasses";
 
  export const router = createBrowserRouter([
     {
@@ -61,12 +64,17 @@ import InstractorProfile from "../Layout/Dashboard/Instrauctor/InstractorProfile
         {
             path:'/details/:id',
             element:<PrivateRoute><Details></Details></PrivateRoute>,
-            loader: ({params})=>fetch(`http://localhost:5000/allClass/${params.id}`),
+            loader: ({params})=>fetch(`https://edu-mentor-server-blush.vercel.app/allClass/${params.id}`),
         },
         {
             path:'/payment',
             element:<Payment></Payment>
-        }
+        },
+        {
+          path:'update/:id/',
+          element:<Update></Update>,
+          loader: ({ params }) => fetch(`https://edu-mentor-server-blush.vercel.app/allClass/${params.id}`),
+        },
     ]
     },
     {
@@ -86,6 +94,16 @@ import InstractorProfile from "../Layout/Dashboard/Instrauctor/InstractorProfile
             element:<MyClass></MyClass>
           },
           {
+            path: 'manageUser',
+            element: <AdminRoute><ManageUser/></AdminRoute>
+
+          },
+          {
+            path: 'manageClasses',
+            element: <AdminRoute><ManageClasses/></AdminRoute>
+
+          },
+          {
             path:'home',
             element:<DashboardHome></DashboardHome>
           },
@@ -94,13 +112,8 @@ import InstractorProfile from "../Layout/Dashboard/Instrauctor/InstractorProfile
             element:<AddClass></AddClass>
           },
           {
-            path:'insclass',
+            path:'insclass/',
             element:<InstractorClass></InstractorClass>
-          },
-          {
-            path:'update',
-            element:<Update></Update>,
-            loader: ({ params }) => fetch(`http://localhost:5000/addclass/${params.id}`),
           },
           {
             path:'insprofile',
@@ -110,5 +123,6 @@ import InstractorProfile from "../Layout/Dashboard/Instrauctor/InstractorProfile
          
         ],
       },
+      
 
   ]);

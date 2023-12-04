@@ -23,7 +23,7 @@ const Google = () => {
                     const userInfo={
                         email: result.user?.email,
                         name: result.user?.displayName,
-                        photoURL:result.user?.photoURL
+                        photourl:result.user?.photoURL
                     }
                     axiospublic.post('/users',userInfo)
                     .then(res=>{

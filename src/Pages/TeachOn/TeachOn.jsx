@@ -33,7 +33,7 @@ function TeachOn() {
 
         console.log(userObj);
 
-        fetch('http://localhost:5000/requests', {
+        fetch('https://edu-mentor-server-blush.vercel.app/requests', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
