@@ -24,7 +24,7 @@ const InstractorProfile = () => {
                                 <tbody>
                                     <tr>
                                         <td className="px-2 py-2 text-gray-500 font-semibold">Role: </td>
-                                        <td className="px-2 py-2">{profileInfo?.role}</td>
+                                        <td className="px-2 py-2">{profileInfo?.role ? profileInfo?.role : 'Student'}</td>
                                     </tr>
                                     <tr>
                                         <td className="px-2 py-2 text-gray-500 font-semibold">Phone</td>
