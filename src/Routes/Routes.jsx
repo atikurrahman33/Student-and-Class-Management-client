@@ -26,6 +26,8 @@ import InstractorProfile from "../Layout/Dashboard/Instrauctor/InstractorProfile
 import ManageUser from "../Layout/Dashboard/Admin/ManageUser/ManageUser";
 import AdminRoute from "./AdminRoute";
 import ManageClasses from "../Layout/Dashboard/Admin/ManageClasses/ManageClasses";
+import TeacherRequest from "../Layout/Dashboard/Dashboard/TeacherRequest";
+import InstructorRoute from "./InstructorRoute";
 
  export const router = createBrowserRouter([
     {
@@ -79,7 +81,7 @@ import ManageClasses from "../Layout/Dashboard/Admin/ManageClasses/ManageClasses
     },
     {
         path: '/dashboard',
-        element: <Dashboard></Dashboard>,
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
         children: [
           {
             path: 'enroll',
@@ -109,15 +111,19 @@ import ManageClasses from "../Layout/Dashboard/Admin/ManageClasses/ManageClasses
           },
           {
             path:'addclass',
-            element:<AddClass></AddClass>
+            element:<InstructorRoute><AddClass></AddClass></InstructorRoute>
           },
           {
             path:'insclass/',
-            element:<InstractorClass></InstractorClass>
+            element: <InstructorRoute><InstractorClass></InstractorClass></InstructorRoute>
           },
           {
             path:'insprofile',
             element:<InstractorProfile></InstractorProfile>
+          },
+          {
+            path:'request',
+            element:<AdminRoute><TeacherRequest></TeacherRequest></AdminRoute>
           }
           // Admin routes
          

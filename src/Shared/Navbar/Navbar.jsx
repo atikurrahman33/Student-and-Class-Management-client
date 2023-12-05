@@ -97,7 +97,7 @@ const Navbar = () => {
                     </div>
                     <div className="flex items-center">
                         <img className="w-[50px] h-[50px]" src={img} alt="" />
-                        <p className="text-lg font-bold">Edu<span className="text-orange-600">Mentor</span></p>
+                        <p className="text-lg font-bold hidden md:block">Edu<span className="text-orange-600">Mentor</span></p>
 
                     </div>
                 </div>
