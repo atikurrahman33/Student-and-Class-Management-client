@@ -24,7 +24,7 @@ Project Name: EduMentor
 
 * We try to add more feature but for time shortes it's not possible this time.
   
-* Promo Video: [Copy of AI_Lab_7.pdf](https://github.com/user-attachments/files/20301977/Copy.of.AI_Lab_7.mp4)
+* Promo Video: [EduMentor.mp4](https://github.com/user-attachments/files/20301977/Copy.of.AI_Lab_7.mp4)
 
 ## Live Link
 
